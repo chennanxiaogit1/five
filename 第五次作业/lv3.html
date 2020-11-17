@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+    </ul>
+    <script>
+      let ul = document.querySelector("ul");
+      let lis = document.querySelectorAll("li");
+      for (let i = 0; i < lis.length; i++) {
+        if ((i + 1) % 2 == 0) {
+          lis[i].style.backgroundColor = "red";
+        }
+        if ((i + 1) % 2 == 1) {
+          lis[i].style.backgroundColor = "green";
+        }
+      }
+      ul.addEventListener("click", function (e) {
+        e.target.innerHTML = "我要星星学姐手把手教我敲代码";
+      });
+    </script>
+  </body>
+</html>

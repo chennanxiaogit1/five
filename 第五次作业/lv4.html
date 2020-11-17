@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        list-style: none;
+      }
+      textarea {
+        width: 200px;
+        height: 100px;
+        margin: 100px;
+        margin-bottom: 0px;
+        margin-right: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea name="" id="" cols="30" rows="10">123</textarea>
+    <button>发布</button>
+    <ul></ul>
+  </body>
+  <script>
+    let btn = document.querySelector("button");
+    let text = document.querySelector("textarea");
+    let ul = document.querySelector("ul");
+    btn.addEventListener("click", function () {
+      if (text.value == "") {
+        alert("你没有输入任何内容");
+      } else {
+        //创建一个对象
+        let li = document.createElement("li");
+        //插入一个对象
+        li.innerHTML = text.value;
+        ul.appendChild(li);
+      }
+    });
+  </script>
+</html>

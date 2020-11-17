@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 400px;
+        height: 100px;
+        margin: 100px auto;
+      }
+      div span {
+        float: left;
+        width: 100px;
+        height: 100px;
+      }
+      .font-size {
+        width: 200px;
+        margin: 50px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <p>我要星星学姐手把手教我敲代码</p>
+    <div>
+      <span style="background-color: wheat">1</span>
+      <span style="background-color: blueviolet">2</span>
+      <span style="background-color: skyblue">3</span>
+      <span style="background-color: pink">4</span>
+    </div>
+    <div class="font-size">
+      <button style="font-size: 12px">12px</button>
+      <button style="font-size: 14px">14px</button>
+      <button style="font-size: 18px">18px</button>
+    </div>
+    <script>
+      // 1.获取元素
+      let span = document.querySelectorAll("span");
+      let btns = document.querySelectorAll("button");
+      let bd = document.body;
+      for (let i = 0; i < span.length; i++) {
+        span[i].addEventListener("click", function () {
+          bd.style.backgroundColor = this.style.backgroundColor;
+        });
+      }
+      for (let i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          bd.style.fontSize = this.style.fontSize;
+        });
+      }
+    </script>
+  </body>
+</html>
